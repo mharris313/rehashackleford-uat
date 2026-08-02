@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reha Shackelford, Esq. — Education Executive &amp; Attorney</title>
+<meta name="description" content="Reha Shackelford, Esq. — education executive, attorney, and founder of Pingree Education. 25+ years in education law, policy, and access.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1a2333;
+    --ink-soft:#4c5a6e;
+    --ink-faint:#8993a4;
+    --paper:#fbfbf9;
+    --paper-deep:#f3f4f1;
+    --card:#ffffff;
+    --blush:#c9a878;
+    --blush-mid:#c9a25f;
+    --blush-deep:#ad8646;
+    --brass:#ad8646;
+    --brass-light:#c9a25f;
+    --line: rgba(26,35,51,0.07);
+    --line-strong: rgba(26,35,51,0.13);
+    --serif:'Fraunces', Georgia, serif;
+    --sans:'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --shadow-sm: 0 1px 3px rgba(26,35,51,0.05);
+    --shadow-md: 0 18px 38px -20px rgba(26,35,51,0.16);
+    --shadow-blush: 0 18px 38px -18px rgba(173,134,70,0.28);
+    --r-sm: 8px;
+    --r-md: 16px;
+    --r-lg: 28px;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    overflow-x:hidden;
+  }
+
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  ul{list-style:none;}
+
+  ::selection{background:var(--blush-mid); color:var(--ink);}
+
+  :focus-visible{
+    outline:2px solid var(--blush-deep);
+    outline-offset:3px;
+    border-radius:4px;
+  }
+
+  .wrap{
+    max-width:1140px;
+    margin:0 auto;
+    padding-left:clamp(20px, 5vw, 40px);
+    padding-right:clamp(20px, 5vw, 40px);
+  }
+
+  /* ---------- Reveal on scroll ---------- */
+  @media (prefers-reduced-motion: no-preference){
+    .reveal{
+      opacity:0;
+      transform:translateY(18px);
+      transition:opacity 0.7s cubic-bezier(.2,.7,.3,1), transform 0.7s cubic-bezier(.2,.7,.3,1);
+    }
+    .reveal.in-view{opacity:1; transform:translateY(0);}
+  }
+
+  /* ---------- Letterhead top thread ---------- */
+  .letterhead-bar{
+    height:5px;
+    background:linear-gradient(90deg,
+      var(--ink) 0%, var(--ink) 22%,
+      var(--brass) 22%, var(--brass) 44%,
+      var(--blush-mid) 44%, var(--blush-mid) 66%,
+      var(--ink) 66%, var(--ink) 100%);
+    background-size:220px 100%;
+  }
+
+  /* ---------- Masthead ---------- */
+  .masthead{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(255,255,255,0.78);
+    backdrop-filter:blur(14px) saturate(160%);
+    -webkit-backdrop-filter:blur(14px) saturate(160%);
+    border-bottom:1px solid var(--line);
+  }
+  .masthead-inner{
+    max-width:1140px;
+    margin:0 auto;
+    padding:18px clamp(20px, 5vw, 40px);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  .brandmark{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:1.05rem;
+    letter-spacing:0.01em;
+    display:flex;
+    align-items:baseline;
+    gap:8px;
+  }
+  .brandmark .dot{
+    width:6px;height:6px;border-radius:50%;
+    background:var(--blush-deep);
+    display:inline-block;
+  }
+  .brandmark small{
+    font-family:var(--sans);
+    font-weight:600;
+    font-size:0.62rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+  }
+
+  .masthead nav{display:flex;gap:32px;}
+  .masthead nav a{
+    font-family:var(--sans);
+    font-weight:600;
+    font-size:0.78rem;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    text-decoration:none;
+    color:var(--ink-soft);
+    position:relative;
+    padding-bottom:4px;
+  }
+  .masthead nav a::after{
+    content:"";
+    position:absolute;
+    left:0; right:100%; bottom:0;
+    height:2px;
+    background:var(--blush-deep);
+    transition:right 0.25s ease;
+  }
+  .masthead nav a:hover{color:var(--ink);}
+  .masthead nav a:hover::after{right:0;}
+
+  /* ---------- Mobile menu ---------- */
+  .menu-toggle{
+    display:none;
+    width:42px;height:42px;
+    border-radius:50%;
+    border:1px solid var(--line-strong);
+    background:var(--card);
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    position:relative;
+    z-index:210;
+  }
+  .menu-toggle span,
+  .menu-toggle span::before,
+  .menu-toggle span::after{
+    content:"";
+    display:block;
+    width:18px;height:2px;
+    background:var(--ink);
+    border-radius:2px;
+    transition:transform 0.3s ease, opacity 0.3s ease, top 0.3s ease;
+  }
+  .menu-toggle span{position:relative;}
+  .menu-toggle span::before{position:absolute; top:-6px;}
+  .menu-toggle span::after{position:absolute; top:6px;}
+  .menu-toggle[aria-expanded="true"] span{background:transparent;}
+  .menu-toggle[aria-expanded="true"] span::before{top:0; transform:rotate(45deg);}
+  .menu-toggle[aria-expanded="true"] span::after{top:0; transform:rotate(-45deg);}
+
+  .mobile-nav{
+    position:fixed;
+    inset:0;
+    z-index:200;
+    background:
+      radial-gradient(120% 60% at 100% 0%, rgba(201,168,120,0.16) 0%, transparent 62%),
+      var(--paper);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:32px clamp(24px, 8vw, 60px);
+    transform:translateY(-100%);
+    transition:transform 0.45s cubic-bezier(.2,.8,.2,1);
+  }
+  .mobile-nav.open{transform:translateY(0);}
+  .mobile-nav ul{display:flex; flex-direction:column; gap:2px;}
+  .mobile-nav a{
+    font-family:var(--serif);
+    font-weight:500;
+    font-size:clamp(1.5rem, 8vw, 2.1rem);
+    text-decoration:none;
+    color:var(--ink);
+    padding:16px 0;
+    border-bottom:1px solid var(--line);
+    display:block;
+  }
+  .mobile-nav .mobile-nav-foot{
+    margin-top:36px;
+    font-size:0.85rem;
+    color:var(--ink-soft);
+  }
+  .mobile-nav .mobile-nav-foot a{
+    font-family:var(--sans);
+    font-weight:600;
+    font-size:0.85rem;
+    color:var(--blush-deep);
+    border-bottom:none;
+    padding:0;
+  }
+  body.nav-open{overflow:hidden;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    max-width:1140px;
+    margin:0 auto;
+    padding:clamp(48px, 8vw, 84px) clamp(20px, 5vw, 40px) clamp(56px, 8vw, 88px);
+    display:grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap:clamp(32px, 6vw, 64px);
+    align-items:center;
+    position:relative;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    top:-10%; right:-8%;
+    width:60%; height:120%;
+    background:radial-gradient(circle, var(--blush) 0%, transparent 68%);
+    opacity:0.16;
+    z-index:-1;
+    pointer-events:none;
+  }
+  .hero-copy .eyebrow{
+    font-family:var(--sans);
+    font-weight:700;
+    font-size:0.78rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--blush-deep);
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:22px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:30px;height:2px;
+    background:var(--brass);
+    display:inline-block;
+    border-radius:2px;
+  }
+  .hero-copy h1{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:clamp(2.5rem, 6.5vw, 4.1rem);
+    line-height:1.06;
+    letter-spacing:-0.01em;
+    color:var(--ink);
+  }
+  .hero-copy .subtitle{
+    margin-top:20px;
+    font-family:var(--serif);
+    font-style:italic;
+    font-weight:500;
+    font-size:clamp(1.08rem, 2.4vw, 1.3rem);
+    color:var(--ink-soft);
+    max-width:46ch;
+    line-height:1.5;
+  }
+  .hero-copy .tags{
+    margin-top:28px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .hero-copy .tags span{
+    font-family:var(--sans);
+    font-weight:600;
+    font-size:0.72rem;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    color:var(--ink);
+    background:var(--card);
+    border:1px solid var(--line-strong);
+    padding:8px 14px;
+    border-radius:99px;
+  }
+
+  .hero-cta{
+    margin-top:36px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+    align-items:center;
+  }
+  .seal-btn{
+    font-family:var(--sans);
+    font-weight:700;
+    font-size:0.82rem;
+    letter-spacing:0.03em;
+    text-decoration:none;
+    background:var(--ink);
+    color:var(--paper);
+    padding:15px 28px;
+    border-radius:var(--r-sm);
+    border:1px solid var(--ink);
+    transition:background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+    box-shadow:var(--shadow-md);
+  }
+  .seal-btn:hover{background:var(--blush-deep); border-color:var(--blush-deep); transform:translateY(-2px);}
+  .ghost-btn{
+    font-family:var(--sans);
+    font-weight:700;
+    font-size:0.82rem;
+    letter-spacing:0.03em;
+    text-decoration:none;
+    color:var(--ink);
+    padding:15px 6px;
+    border-bottom:2px solid var(--blush-deep);
+    transition:color 0.2s ease;
+  }
+  .ghost-btn:hover{color:var(--blush-deep);}
+
+  /* Portrait */
+  .portrait-frame{
+    position:relative;
+    aspect-ratio: 4/5;
+    border-radius:var(--r-lg);
+    padding:0;
+    overflow:hidden;
+    box-shadow:var(--shadow-blush);
+    background:linear-gradient(160deg, var(--blush) 0%, var(--paper-deep) 100%);
+  }
+  .portrait-frame img{
+    width:100%;height:100%;object-fit:cover;
+  }
+  .portrait-frame::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:var(--r-lg);
+    border:1px solid rgba(255,255,255,0.6);
+    box-shadow: inset 0 0 0 10px rgba(255,255,255,0.85);
+    pointer-events:none;
+  }
+  .portrait-caption{
+    margin-top:16px;
+    font-family:var(--sans);
+    font-weight:600;
+    font-size:0.72rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+    text-align:center;
+  }
+
+  /* ---------- Section shell ---------- */
+  section{
+    max-width:1140px;
+    margin:0 auto;
+    padding:clamp(56px, 9vw, 92px) clamp(20px, 5vw, 40px);
+  }
+  .section-head{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin-bottom:clamp(32px, 6vw, 48px);
+  }
+  .section-head .num{
+    font-family:var(--sans);
+    font-weight:700;
+    font-size:0.78rem;
+    color:var(--card);
+    background:var(--blush-deep);
+    width:30px;height:30px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+  }
+  .section-head h2{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:clamp(1.6rem, 3.4vw, 2.1rem);
+    letter-spacing:-0.01em;
+  }
+  .section-head .rule{
+    flex:1;
+    height:1px;
+    background:var(--line);
+  }
+
+  /* ---------- About ---------- */
+  #about{background:var(--paper-deep);}
+  .about-grid{
+    display:grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap:clamp(32px, 6vw, 60px);
+  }
+  .about-grid p{
+    font-family:var(--sans);
+    font-size:1.05rem;
+    color:var(--ink-soft);
+    margin-bottom:20px;
+    max-width:62ch;
+  }
+  .about-grid p:first-of-type{
+    font-size:1.22rem;
+    color:var(--ink);
+    font-weight:500;
+  }
+  .stat-block{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    align-content:start;
+  }
+  .stat{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--r-md);
+    padding:20px 18px;
+    box-shadow:var(--shadow-sm);
+    border-top:3px solid var(--blush-deep);
+  }
+  .stat .figure{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:2rem;
+    color:var(--ink);
+    line-height:1;
+  }
+  .stat .label{
+    margin-top:8px;
+    font-family:var(--sans);
+    font-weight:600;
+    font-size:0.72rem;
+    letter-spacing:0.02em;
+    color:var(--ink-soft);
+    line-height:1.4;
+  }
+
+  /* ---------- Docket / Experience ---------- */
+  .docket{position:relative;}
+  .docket::before{
+    content:"";
+    position:absolute;
+    top:6px; bottom:6px; left:22px;
+    width:2px;
+    background:linear-gradient(var(--blush-mid), var(--line));
+    border-radius:2px;
+  }
+  .entry{
+    position:relative;
+    display:grid;
+    grid-template-columns:46px 1fr;
+    gap:0 28px;
+    padding-bottom:clamp(36px, 6vw, 48px);
+  }
+  .entry:last-child{padding-bottom:0;}
+  .entry .seal{
+    width:46px;height:46px;
+    border-radius:50%;
+    background:var(--card);
+    border:2px solid var(--brass);
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:0.95rem;
+    color:var(--brass);
+    position:relative;
+    z-index:2;
+    flex-shrink:0;
+    box-shadow:var(--shadow-sm);
+  }
+  .entry-body{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--r-md);
+    padding:clamp(18px, 3vw, 26px) clamp(18px, 3vw, 28px);
+    box-shadow:var(--shadow-sm);
+  }
+  .entry-body .role-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    flex-wrap:wrap;
+    gap:6px 18px;
+  }
+  .entry-body h3{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:1.24rem;
+    color:var(--ink);
+  }
+  .entry-body .org{
+    font-family:var(--sans);
+    font-weight:700;
+    color:var(--blush-deep);
+    font-size:0.9rem;
+    margin-top:2px;
+  }
+  .entry-body .meta{
+    font-family:var(--sans);
+    font-weight:600;
+    font-size:0.74rem;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+    white-space:nowrap;
+  }
+  .entry-body p.desc{
+    margin-top:12px;
+    color:var(--ink-soft);
+    max-width:70ch;
+    font-size:0.95rem;
+  }
+  .entry-body ul{
+    margin-top:12px;
+    padding-left:0;
+    color:var(--ink-soft);
+    font-size:0.92rem;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+  }
+  .entry-body ul li{
+    position:relative;
+    padding-left:18px;
+  }
+  .entry-body ul li::before{
+    content:"";
+    position:absolute;
+    left:0; top:0.55em;
+    width:6px;height:6px;
+    border-radius:50%;
+    background:var(--blush-mid);
+  }
+
+  /* ---------- Education ---------- */
+  #education{background:var(--ink); color:var(--paper);}
+  #education .section-head h2{color:var(--paper);}
+  #education .section-head .rule{background:rgba(251,247,246,0.16);}
+  #education .section-head .num{background:var(--blush-mid); color:var(--ink);}
+  .edu-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:18px;
+  }
+  .edu-card{
+    padding:26px 24px;
+    background:rgba(251,247,246,0.06);
+    border:1px solid rgba(251,247,246,0.14);
+    border-radius:var(--r-md);
+    border-top:3px solid var(--brass-light);
+    transition:background 0.25s ease, transform 0.25s ease;
+  }
+  .edu-card:hover{background:rgba(242,217,222,0.1); transform:translateY(-3px);}
+  .edu-card .deg{
+    font-family:var(--sans);
+    font-weight:700;
+    font-size:0.72rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--blush-mid);
+  }
+  .edu-card h3{
+    font-family:var(--serif);
+    font-weight:600;
+    margin-top:10px;
+    font-size:1.14rem;
+  }
+  .edu-card .yrs{
+    margin-top:6px;
+    font-family:var(--sans);
+    font-weight:600;
+    font-size:0.76rem;
+    color:rgba(251,247,246,0.55);
+  }
+  .edu-card p{
+    margin-top:14px;
+    font-size:0.86rem;
+    line-height:1.55;
+    color:rgba(251,247,246,0.7);
+  }
+
+  /* ---------- Footer / contact ---------- */
+  footer{
+    background:var(--paper-deep);
+    border-top:1px solid var(--line);
+    position:relative;
+    overflow:hidden;
+  }
+  footer::before{
+    content:"";
+    position:absolute;
+    bottom:-20%; left:-10%;
+    width:50%; height:80%;
+    background:radial-gradient(circle, var(--blush) 0%, transparent 68%);
+    opacity:0.14;
+    pointer-events:none;
+  }
+  .footer-inner{
+    max-width:1140px;
+    margin:0 auto;
+    padding:clamp(48px, 8vw, 64px) clamp(20px, 5vw, 40px) clamp(36px, 6vw, 44px);
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    gap:40px;
+    align-items:end;
+    position:relative;
+  }
+  .footer-inner h2{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:clamp(1.7rem, 4vw, 2.2rem);
+    max-width:15ch;
+    line-height:1.2;
+  }
+  .footer-inner .practice{
+    margin-top:16px;
+    color:var(--ink-soft);
+    max-width:50ch;
+    font-size:0.98rem;
+  }
+  .footer-links{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    align-items:flex-start;
+  }
+  .footer-links a{
+    font-family:var(--sans);
+    font-weight:700;
+    font-size:0.92rem;
+    text-decoration:none;
+    border-bottom:2px solid var(--blush-deep);
+    padding-bottom:3px;
+    transition:color 0.2s ease;
+  }
+  .footer-links a:hover{color:var(--blush-deep);}
+  .footer-bottom{
+    border-top:1px solid var(--line);
+    padding:20px clamp(20px, 5vw, 40px);
+    max-width:1140px;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:8px;
+    font-family:var(--sans);
+    font-weight:600;
+    font-size:0.72rem;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+    position:relative;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:860px){
+    .masthead nav{display:none;}
+    .menu-toggle{display:flex;}
+    .hero{grid-template-columns:1fr; padding-top:28px; text-align:left;}
+    .hero-copy{order:2;}
+    .portrait-frame{order:1; max-width:240px; margin:0 auto;}
+    .portrait-caption{order:1;}
+    .about-grid{grid-template-columns:1fr; gap:28px;}
+    .stat-block{grid-template-columns:1fr 1fr;}
+    .entry{grid-template-columns:38px 1fr; gap:0 16px;}
+    .entry .seal{width:38px; height:38px; font-size:0.8rem;}
+    .docket::before{left:18px;}
+    .edu-grid{grid-template-columns:1fr;}
+    .footer-inner{grid-template-columns:1fr; align-items:start; gap:28px;}
+    .footer-links{align-items:flex-start; text-align:left;}
+  }
+
+  @media (max-width:640px){
+    .masthead-inner{padding-top:14px; padding-bottom:14px;}
+    .brandmark{font-size:0.96rem;}
+    .hero-copy .subtitle{max-width:none;}
+    .hero-cta{flex-direction:column; align-items:stretch; gap:12px;}
+    .hero-cta .seal-btn, .hero-cta .ghost-btn{text-align:center;}
+    .hero-cta .ghost-btn{padding:13px 6px;}
+    section{padding-top:clamp(44px, 12vw, 64px); padding-bottom:clamp(44px, 12vw, 64px);}
+    .stat{padding:16px 14px;}
+    .stat .figure{font-size:1.6rem;}
+    .entry-body{padding:18px 16px;}
+    .entry-body .role-row{flex-direction:column; align-items:flex-start; gap:4px;}
+  }
+
+  @media (max-width:520px){
+    .stat-block{grid-template-columns:1fr 1fr; gap:12px;}
+    .hero-copy .tags span{font-size:0.68rem; padding:7px 12px;}
+    .hero-copy .tags{gap:8px;}
+    .edu-card{padding:22px 20px;}
+  }
+
+  @media (max-width:400px){
+    .wrap, .masthead-inner, .hero, section, .footer-inner, .footer-bottom{padding-left:16px; padding-right:16px;}
+    .stat-block{grid-template-columns:1fr;}
+    .hero-copy h1{font-size:clamp(2.1rem, 9vw, 2.6rem);}
+    .brandmark small{display:none;}
+  }
+</style>
+</head>
+<body>
+
+
+  <header class="masthead">
+    <div class="masthead-inner">
+      <a href="#top" class="brandmark"><span class="dot"></span>Reha Shackelford<small>Esq.</small></a>
+      <nav>
+        <a href="#about">Statement</a>
+        <a href="#experience">Record</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Counsel</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <ul>
+      <li><a href="#about">Statement</a></li>
+      <li><a href="#experience">Record</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Counsel</a></li>
+    </ul>
+    <div class="mobile-nav-foot">
+      Washington, D.C. &middot; Maryland &nbsp;&mdash;&nbsp; <a href="mailto:rehashackleford@gmail.com">rehashackleford@gmail.com</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="hero-copy reveal">
+      <div class="eyebrow">Education Executive &amp; Attorney</div>
+      <h1>Reha&nbsp;Shackelford,<br>Esq.</h1>
+      <p class="subtitle">Education is not a system to me, it is a promise. I have spent more than 25 years making sure that promise is kept for the students who need it most.</p>
+      <div class="tags">
+        <span>K&ndash;12</span>
+        <span>Higher Ed</span>
+        <span>Federal Policy</span>
+        <span>Equity</span>
+        <span>Strategy</span>
+      </div>
+      <div class="hero-cta">
+        <a class="seal-btn" href="#experience">View the Record</a>
+        <a class="ghost-btn" href="#contact">Retain Counsel</a>
+      </div>
+    </div>
+    <div>
+      <div class="portrait-frame reveal">
+        <img src="reha.webp" alt="Portrait of Reha Shackelford, Esq." width="800" height="1000">
+      </div>
+      <div class="portrait-caption">Washington, D.C. &middot; Maryland</div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="section-head">
+      <span class="num">01</span>
+      <h2>Statement</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="about-grid">
+      <div class="reveal">
+        <p>My career began in Detroit, where I built college access programs from the ground up for Title I students who had every reason to doubt that higher education was meant for them. When you build the right systems, develop the right leaders, and refuse to accept anything less than excellence, students exceed every expectation placed on them.</p>
+        <p>From those founding years, I moved into federal policy, spending nearly a decade at the U.S. Department of Education shaping the systems that govern educational access for millions of students &mdash; then into education law in Baltimore, and accreditation oversight at the national level. Each chapter sharpened the same conviction: that the institutions, leaders, and systems above a student are responsible for making an excellent education real.</p>
+        <p>I am a practicing attorney, higher education professor, and the founder of Pingree Education, a college counseling venture committed to expanding access for first-generation and low-income students in the DMV area.</p>
+      </div>
+      <div class="stat-block reveal">
+        <div class="stat">
+          <div class="figure">25+</div>
+          <div class="label">Years in Education Leadership</div>
+        </div>
+        <div class="stat">
+          <div class="figure">98%</div>
+          <div class="label">Graduation Rate, Detroit Cohort</div>
+        </div>
+        <div class="stat">
+          <div class="figure">$2.4M</div>
+          <div class="label">Scholarships, Single Class</div>
+        </div>
+        <div class="stat">
+          <div class="figure">90</div>
+          <div class="label">Institutions Overseen, 46 States</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="section-head">
+      <span class="num">02</span>
+      <h2>The Record</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="docket">
+
+      <div class="entry reveal">
+        <div class="seal">01</div>
+        <div class="entry-body">
+          <div class="role-row">
+            <h3>Founder &amp; Principal Attorney</h3>
+            <span class="meta">Aug 2022 &mdash; Present</span>
+          </div>
+          <div class="org">Pingree Law &middot; Bowie, MD / Remote</div>
+          <p class="desc">Founded and operate a private legal practice in real estate and estate planning, serving clients across D.C. and Maryland &mdash; full-cycle ownership of strategy, operations, client development, and compliance.</p>
+        </div>
+      </div>
+
+      <div class="entry reveal">
+        <div class="seal">02</div>
+        <div class="entry-body">
+          <div class="role-row">
+            <h3>Vice President for Institutional Field Relations</h3>
+            <span class="meta">Sep 2025 &mdash; Apr 2026</span>
+          </div>
+          <div class="org">Middle States Commission on Higher Education &middot; Remote</div>
+          <p class="desc">Led accreditation oversight and strategic accountability for a national portfolio of 90 higher education institutions across 46 states and internationally.</p>
+          <ul>
+            <li>Senior decision-maker on institutional readiness and viability risk for complex, multi-stakeholder institutions</li>
+            <li>Designed scalable readiness and assessment frameworks for the CEO and Commission leadership</li>
+            <li>Led and developed a national team of peer evaluators, standardizing quality across a diverse portfolio</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="entry reveal">
+        <div class="seal">03</div>
+        <div class="entry-body">
+          <div class="role-row">
+            <h3>Associate Attorney, School Services Team</h3>
+            <span class="meta">Sep 2024 &mdash; Sep 2025</span>
+          </div>
+          <div class="org">Baltimore City Public Schools &middot; Baltimore, MD</div>
+          <p class="desc">Provided legal strategy and compliance leadership for a district serving 77,000+ students.</p>
+          <ul>
+            <li>Advised 10,000+ education professionals on IDEA, Section 504, and federal compliance through a district-wide program built from inception</li>
+            <li>Represented district leadership in administrative hearings and high-stakes negotiations</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="entry reveal">
+        <div class="seal">04</div>
+        <div class="entry-body">
+          <div class="role-row">
+            <h3>Analyst, Office of Policy, Planning &amp; Innovation</h3>
+            <span class="meta">Aug 2020 &mdash; Sep 2024</span>
+          </div>
+          <div class="org">U.S. Department of Education &middot; Washington, D.C.</div>
+          <p class="desc">Served as the federal government's primary analytical and policy lead for accreditation agency oversight, authoring evaluations presented to NACIQI that informed Secretary-level decisions.</p>
+          <ul>
+            <li>Authored 50&ndash;60 page federal compliance evaluation reports for senior federal advisory audiences</li>
+            <li>Authoritative federal interpreter of recognition criteria for agency executives and institutional leaders</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="entry reveal">
+        <div class="seal">05</div>
+        <div class="entry-body">
+          <div class="role-row">
+            <h3>Program Lead, Office of Special Education Programs</h3>
+            <span class="meta">Feb 2017 &mdash; Aug 2020</span>
+          </div>
+          <div class="org">U.S. Department of Education &middot; Washington, D.C.</div>
+          <p class="desc">Primary federal lead for IDEA implementation and accountability across all 50 states and territories, overseeing the nation's largest equity infrastructure for students with disabilities.</p>
+          <ul>
+            <li>Evaluated state systemic improvement plans, shaping federal oversight decisions across the network</li>
+            <li>Managed the national dispute resolution portfolio and cross-state policy escalations</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="entry reveal">
+        <div class="seal">06</div>
+        <div class="entry-body">
+          <div class="role-row">
+            <h3>Education Program Manager, Office of Postsecondary Education</h3>
+            <span class="meta">Dec 2014 &mdash; Feb 2017</span>
+          </div>
+          <div class="org">U.S. Department of Education &middot; Washington, D.C.</div>
+          <p class="desc">Managed the federal Fulbright-Hays Group Projects Abroad grant competition, overseeing the full program cycle from panel review design through competitive award.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="section-head">
+      <span class="num">03</span>
+      <h2>Education &amp; Credentials</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-card reveal">
+        <div class="deg">Juris Doctor</div>
+        <h3>Cooley Law School</h3>
+        <div class="yrs">2012 &mdash; 2015</div>
+        <p>Student Bar Association Senator &middot; Black Law Students Association &middot; Mock Trial</p>
+      </div>
+      <div class="edu-card reveal">
+        <div class="deg">BA, Communication</div>
+        <h3>California State University, Northridge</h3>
+        <div class="yrs">&nbsp;</div>
+        <p>Black Graduation Committee &middot; Communication Association &middot; Phi Alpha Delta Pre-Law Fraternity</p>
+      </div>
+      <div class="edu-card reveal">
+        <div class="deg">Certification</div>
+        <h3>Grants Management &mdash; Federal Track</h3>
+        <div class="yrs">Management Concepts</div>
+        <p>Admitted to Practice</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="footer-inner">
+      <div class="reveal">
+        <h2>Retain counsel or start a conversation.</h2>
+        <p class="practice">Available for legal counsel in D.C. and Maryland, institutional advisory work, speaking engagements, and college access consulting through Pingree Education.</p>
+      </div>
+      <div class="footer-links reveal">
+        <a href="mailto:rehashackleford@gmail.com">rehashackleford@gmail.com</a>
+        <a href="https://www.linkedin.com/in/reha-shackelford-esq-325876b/">LinkedIn &rarr;</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Reha Shackelford, Esq. &mdash; All Rights Reserved</span>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileNav = document.getElementById('mobileNav');
+
+    function closeMenu(){
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Open menu');
+      mobileNav.classList.remove('open');
+      mobileNav.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('nav-open');
+    }
+    function openMenu(){
+      menuToggle.setAttribute('aria-expanded', 'true');
+      menuToggle.setAttribute('aria-label', 'Close menu');
+      mobileNav.classList.add('open');
+      mobileNav.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('nav-open');
+    }
+    menuToggle.addEventListener('click', () => {
+      const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+      isOpen ? closeMenu() : openMenu();
+    });
+    mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+    // Scroll reveal
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting){
+            entry.target.classList.add('in-view');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('in-view'));
+    }
+  </script>
+
+</body>
+</html>
