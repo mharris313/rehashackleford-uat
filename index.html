@@ -263,8 +263,8 @@
     transition:transform 0.3s ease, opacity 0.3s ease, top 0.3s ease;
   }
   .menu-toggle span{position:relative;}
-  .menu-toggle span::before{position:relative; top:-6px;}
-  .menu-toggle span::after{position:relative; top:6px;}
+  .menu-toggle span::before{position:absolute; top:-6px;}
+  .menu-toggle span::after{position:absolute; top:6px;}
   .menu-toggle[aria-expanded="true"] span{background:transparent;}
   .menu-toggle[aria-expanded="true"] span::before{top:0; transform:rotate(45deg);}
   .menu-toggle[aria-expanded="true"] span::after{top:0; transform:rotate(-45deg);}
